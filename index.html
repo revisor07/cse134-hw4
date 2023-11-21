@@ -46,8 +46,8 @@
                     <figcaption>— Thomas A. Powell</figcaption>
                 </figure>
                 <p id = "education">Graduated from University of California - San Diego with B.S. in Computer Science</p>
-                <picture id = ucsd_logo>
-                    <img src="images/ucsd_seal.webp" alt="image of UCSD seal" style="width: 10vw;">
+                <picture>
+                    <img id = ucsd_logo src="images/ucsd_seal.webp" alt="image of UCSD seal">
                 </picture>
 
             </div>
@@ -56,29 +56,34 @@
             <h2 class = "section-title">My Expertise</h2>
             <div class = skill-boxes>
                 <div class = skill-box>
-                    <h3> &#9826;&nbsp;Back End</h3>
+                    <!--
+                    <span>
+                        <h3 style="display: inline"> &#9826;&nbsp;</h3> <h3 id = "skill-1" style="display: inline">Back End</h3>
+                    </span>
+                    -->
+                    <h3 id = "skill-1"> &#9826;&nbsp;Back End</h3>
                     <p>Experienced in computer science fundamentals and OOP languages such as C++, C#, Python, Java</p>
                 </div>
                 <div class = skill-box>
-                    <h3>&#9826;&nbsp;Front End</h3>
+                    <h3 id = "skill-2">&#9826;&nbsp;Front End</h3>
                     <p>Passionate about UI/UX, well versed in delevoping with HTML, CSS, Javasript, and React</p>
                 </div>
-                <div class = skill-box>
-                    <h3>&#9826;&nbsp;Databases</h3>
+                <div class = skill-box >
+                    <h3 id = "skill-3">&#9826;&nbsp;Databases</h3>
                     <p>Experienced in deploying and working with relational datases such as MySQL, SQLite, 
                         as well as REST API for database communication using python and Node.js</p>
                 </div>
-                <div class = skill-box>
-                    <h3>&#9826;&nbsp;Libraries</h3>
+                <div class = skill-box >
+                    <h3 id = "skill-4">&#9826;&nbsp;Libraries</h3>
                     <p>Experienced in Various python libraries including but not limited to: numPy, pandas, BeautifulSoup</p>
                 </div>
-                <div class = skill-box>
-                    <h3>&#9826;&nbsp;Tools</h3>
+                <div class = skill-box >
+                    <h3 id = "skill-5">&#9826;&nbsp;Tools</h3>
                     <p>Familiar with CI/CD pipeline through github action, AWS, Docker,
                         Postman, DigitalOcean, and Agile Methodology</p>
                 </div>
-                <div class = skill-box>
-                    <h3>&#9826;&nbsp;AIML</h3>
+                <div class = skill-box >
+                    <h3 id = "skill-6">&#9826;&nbsp;AIML</h3>
                     <p>Experienced in deep learning workflows utilizing TensorFlow and Pytorch</p>
                 </div>
             </div>
@@ -109,39 +114,41 @@
                         <p>A pomodoro timer web application</p>
                     </div>
                 </a>
-                <a class = "project-card" href="https://pypi.org/project/snapper/">
-                    <img src="images/proj4.webp" alt="project preview image" style="width:100%" target="_blank">
+                <a class = "project-card" href="https://pypi.org/project/snapper/" target="_blank">
+                    <img src="images/proj4.webp" alt="project preview image" style="width:100%" >
                     <div class="project-caption">
                         <h4>Snapper</h4>
                         <p>A security tool based on AIOHTTP server for grabbing screenshots of web hosts from the cloud</p>
                     </div>
                 </a>
-                <a class = "project-card" href="https://pypi.org/project/snapper/">
-                    <img src="images/proj4.webp" alt="project preview image" style="width:100%" target="_blank">
+                <a class = "project-card" href="https://www.gallerymilmar.com/" target="_blank">
+                    <img src="images/proj5.webp" alt="project preview image" style="width:100%">
                     <div class="project-caption">
-                        <h4>Snapper</h4>
-                        <p>A security tool based on AIOHTTP server for grabbing screenshots of web hosts from the cloud</p>
+                        <h4>Gallery Milmar</h4>
+                        <p>A multi-page website for an Art Gallery In Carmel-by-the-Sea</p>
                     </div>
                 </a>
-                <a class = "project-card" href="https://pypi.org/project/snapper/">
-                    <img src="images/proj4.webp" alt="project preview image" style="width:100%" target="_blank">
+                <a class = "project-card" href="https://github.com/revisor07/talent-games-analytics" target="_blank">
+                    <img src="images/proj6.webp" alt="project preview image" style="width:100%">
                     <div class="project-caption">
-                        <h4>Snapper</h4>
-                        <p>A security tool based on AIOHTTP server for grabbing screenshots of web hosts from the cloud</p>
+                        <h4>Talent Predictor</h4>
+                        <p>A tool that comparing the relative github activity of silicon valley companies 
+                            to the stock prices and calculates the correlation coefficients using numPy
+                        </p>
                     </div>
                 </a>
-                <a class = "project-card" href="https://pypi.org/project/snapper/">
-                    <img src="images/proj4.webp" alt="project preview image" style="width:100%" target="_blank">
+                <a class = "project-card" href="https://github.com/revisor07/linkedin-parser" target="_blank">
+                    <img src="images/proj7.webp" alt="project preview image" style="width:100%">
                     <div class="project-caption">
-                        <h4>Snapper</h4>
-                        <p>A security tool based on AIOHTTP server for grabbing screenshots of web hosts from the cloud</p>
+                        <h4>Linkedin Parser</h4>
+                        <p>A BeautifulSoup4-based scraper that processes provided linkedin URLs, extracts, and analyzes data</p>
                     </div>
                 </a>
-                <a class = "project-card" href="https://pypi.org/project/snapper/">
-                    <img src="images/proj4.webp" alt="project preview image" style="width:100%" target="_blank">
+                <a class = "project-card" href="https://github.com/revisor07/MIDI-music-composing" target="_blank">
+                    <img src="images/proj8.webp" alt="project preview image" style="width:100%">
                     <div class="project-caption">
-                        <h4>Snapper</h4>
-                        <p>A security tool based on AIOHTTP server for grabbing screenshots of web hosts from the cloud</p>
+                        <h4>MIDI Music Composition</h4>
+                        <p>A deep learning tool that trains a PyTorch/TensorFlow model on classical music piano MIDI files</p>
                     </div>
                 </a>
             </div>
