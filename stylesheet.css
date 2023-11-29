@@ -8,14 +8,16 @@
 * {
     box-sizing: border-box;
     color: white;
-    
-    
+    scroll-margin-top: 2em; 
+}
+html {
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--background-color, gray);
     margin: 0;
 }
-a,p,i,figcaption,b{
+a,p,i,figcaption,b, label, input, output{
     font-family: 'Roboto Mono', 'Arial', monospace;
 }
 h1,h2,h3,h4, details{
@@ -91,8 +93,9 @@ nav li{
 
 
 #home {
-    height: 70vh;
     text-align: center;
+    /* make sure scroll to home starts from the actual top of the page */
+    scroll-margin-top: 50vh; 
 }
  
 #home h1{
@@ -107,12 +110,16 @@ nav li{
 
 .about{
     margin-top: 8em;
-    margin-bottom: 8em;
-    margin-right: 10px;
+    margin-bottom: 19vh;
+    /*margin-bottom: 8em;*/
+    
     display:flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+}
+.about>*{
+    margin-bottom: 2em;
 }
 #quote{
     text-align: left;
@@ -289,3 +296,64 @@ details[open] summary ~ * {
     margin-top: 4vh;
     margin-left: 0 !important;
 }
+
+
+
+/* EXTRAS PAGE */
+
+#contact-form{
+    margin: 5vw;
+    background-color: #34568B;
+    padding: 2em;
+    border-radius: 20px 20px 20px 20px;
+}
+
+input, textarea{
+    color: #0e0e0e;
+    margin-bottom: 1em;
+}
+.form-wrapper{
+    display: flex;
+    justify-content: left;
+    
+}
+#submit-button{
+    background-color: #0e0e0e;
+    color: white;
+    border: 0;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: 0.3s;
+    min-width: 0;
+    margin-top: 1em;
+    opacity: 70%;
+}
+#submit-button:hover{
+    opacity: 100%;
+}
+
+input{
+    min-width: 20em;
+}
+textarea{
+    max-width: 90%;
+}
+
+label{
+    display: block; 
+    margin-bottom: 0.1em;
+    margin-top: 0.5em;
+}
+
+input:user-invalid, textarea:user-invalid{
+    border: 2px solid #FF6F61;
+}
+
+label:has(+ input:user-invalid){
+    content: "w";
+    color: #FF6F61;
+    margin-right: 5px;
+}
+
+  
