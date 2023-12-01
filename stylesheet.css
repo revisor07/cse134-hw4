@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&family=Roboto+Mono:wght@300&display=swap');
 :root {
     --background-color: #24252A;
+    --text-color: white;
     --menu-underline-color: #bc60fb;
   }
 /* global settings */
 * {
     box-sizing: border-box;
-    color: white;
+    color: var(--text-color);
     scroll-margin-top: 2em; 
 }
 html {
@@ -17,10 +18,10 @@ body{
     background-color: var(--background-color, gray);
     margin: 0;
 }
-a,p,i,figcaption,b, label, input, output{
+a,p,i,figcaption,b, label, input{
     font-family: 'Roboto Mono', 'Arial', monospace;
 }
-h1,h2,h3,h4, details{
+h1,h2,h3,h4, details, output{
     font-family: 'Helvetica', 'Arial', monospace;
 }
 
@@ -232,6 +233,7 @@ nav li{
     justify-content: center;
   
 }
+
 .experience-list{
     display: flex;
     flex-direction: column;
@@ -301,23 +303,24 @@ details[open] summary ~ * {
 
 /* EXTRAS PAGE */
 
-#contact-form{
+#contact-form, #theme-switch{
     margin: 5vw;
     background-color: #34568B;
     padding: 2em;
     border-radius: 20px 20px 20px 20px;
 }
 
+
+
 input, textarea{
     color: #0e0e0e;
     margin-bottom: 1em;
 }
-.form-wrapper{
+.experiments-wrapper{
     display: flex;
     justify-content: left;
-    
 }
-#submit-button{
+#submit-button, #theme-button{
     background-color: #0e0e0e;
     color: white;
     border: 0;
@@ -329,15 +332,12 @@ input, textarea{
     margin-top: 1em;
     opacity: 70%;
 }
-#submit-button:hover{
+#submit-button:hover, #theme-button:hover{
     opacity: 100%;
 }
 
 input{
     min-width: 20em;
-}
-textarea{
-    max-width: 90%;
 }
 
 label{
@@ -350,10 +350,18 @@ input:user-invalid, textarea:user-invalid{
     border: 2px solid #FF6F61;
 }
 
-label:has(+ input:user-invalid){
+label:has(+ input:user-invalid),label:has(+ textarea:user-invalid) {
     content: "w";
     color: #FF6F61;
     margin-right: 5px;
 }
 
-  
+.errors {
+    color: #FF6F61;
+    font-size: 0.9em;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+#theme-switch{
+    visibility:hidden
+}
