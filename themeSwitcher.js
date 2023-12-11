@@ -2,10 +2,9 @@
 let backgroundColorDarkMode = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
 let backgroundColorLightMode = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
 let textColorDarkMode = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
-let textColorLightMode = getComputedStyle(document.documentElement).getPropertyValue('--background-color')
+let textColorLightMode = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
 
-
-function toggleTheme() { 
+function toggleTheme() {
     const savedTheme = localStorage.getItem('theme');
     
     let newTheme = 'light';
@@ -26,17 +25,20 @@ function toggleTheme() {
     localStorage.setItem('theme', newTheme);
 
     let themeIndicator = document.getElementById('current-theme-text');
-    themeIndicator.textContent = newTheme === "dark" ? "Dark Theme": "Light Theme";
+    themeIndicator.textContent = newTheme === "dark" ? "Dark Mode": "Light Mode";
+    document.documentElement.style.setProperty('--text-color', backgroundColorLightMode);
     
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+
     document.querySelector('#theme-switch').style.visibility = 'visible';
     let themeIndicator = document.getElementById('current-theme-text');
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.style.setProperty('--mode-background-color', savedTheme === 'dark' ? backgroundColorDarkMode  : backgroundColorLightMode);
         document.documentElement.style.setProperty('--mode-text-color', savedTheme === 'dark' ? textColorDarkMode : textColorLightMode);
-        themeIndicator.textContent = savedTheme === "dark" ? "Dark Theme": "Light Theme";
+        themeIndicator.textContent = savedTheme === "dark" ? "Dark Mode": "Light Mode";
     }
+    document.documentElement.style.setProperty('--text-color', backgroundColorLightMode);
 });
