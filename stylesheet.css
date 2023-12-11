@@ -3,6 +3,8 @@
 :root {
     --background-color: #24252A;
     --text-color: white;
+    --mode-background-color: var(--background-color);
+    --mode-text-color: var(--text-color);
     --menu-underline-color: #bc60fb;
   }
 /* global settings */
@@ -15,10 +17,10 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    background-color: var(--background-color, gray);
+    background-color: var(--mode-background-color, gray);
     margin: 0;
 }
-a,p,i,figcaption,b, label, input{
+a,p,i,figcaption,b, label, input, button{
     font-family: 'Roboto Mono', 'Arial', monospace;
 }
 h1,h2,h3,h4, details, output{
@@ -363,5 +365,9 @@ label:has(+ input:user-invalid),label:has(+ textarea:user-invalid) {
     transition: opacity 0.3s ease-out;
 }
 #theme-switch{
-    visibility:hidden
+    visibility:hidden;
+}
+
+.section-title, a {
+    color: var(--mode-text-color);
 }

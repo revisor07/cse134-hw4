@@ -51,7 +51,7 @@ document.getElementById('contact-form').addEventListener('input', function(event
     else{
         document.getElementById('comments-info').style.color = 'yellow';
     }
-    commentsInfo.textContent = `Remainng character limit: ${maxCommentLength-commentsLen}`;
+    commentsInfo.textContent = `Remaining character limit: ${maxCommentLength-commentsLen}`;
 });
 
 function displayError(fieldName, errorMessage){
